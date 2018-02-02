@@ -1,0 +1,119 @@
+<!doctype html>
+<html> 
+   <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href = 'style.css' rel = 'stylesheet'>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <div class  = 'editing-area'>
+            <div class = 'edit-note' > 
+                <div  class = 'edit-header'contenteditable="true" aria-multiline="true" style="display: block"></div>
+                <div class = 'edit-content' contenteditable="true" aria-multiline="true"></div>
+                <div class = 'edit-tools' style="display:flex">
+                    <div class = 'container'>
+                        <div class = 'priority-type' style = 'background-color: rgb(200, 200, 200)' id = 'priority'> Приоритетная </div>
+                        <div class = 'priority-type' id = 'normal' >Обычная</div>
+                    </div>
+                    <div  class = 'container'>
+                        <div style = 'margin-right: 5px'>Картинка:</div> <input id = 'edit-image'/>
+                    </div>
+                    <div class = 'container'>
+                        <div class = 'color yellow' style="border-color: rgb(150, 150, 150)"></div>
+                        <div class = 'color orange'></div>
+                        <div class = 'color red'></div>
+                        <div class = 'color blue'></div>
+                    </div>
+                    <div class = 'done' from = ''>Готово</div>
+                </div>  
+                </div>
+        </div>
+        <div class = 'new-note'> 
+            <div  class = 'new-header' contenteditable="true" aria-multiline="true"></div>
+            <div class = 'new-content' contenteditable="true" aria-multiline="true"></div>
+            <div class = 'tools'>
+                <div class = 'container'>
+                    <div class = 'priority-type' style = 'background-color: rgb(200, 200, 200)'> Приоритетная </div>
+                    <div class = 'priority-type'>Обычная</div>
+                </div>
+                <div  class = 'container'>
+                    <div style = 'margin-right: 5px'>Картинка:</div> <input id = 'new-image'/>
+                </div>
+                <div class = 'container'>
+                    <div class = 'color yellow' style="border-color: rgb(150, 150, 150)"></div>
+                    <div class = 'color orange'></div>
+                    <div class = 'color red'></div>
+                    <div class = 'color blue'></div>
+                </div>
+                <div class = 'add'>Готово</div>
+            </div>  
+        </div>
+        <div class = 'group priority'>
+            <h2>Приоритетные</h2>
+            
+            <div class  = 'notes-container'>
+
+                <div class = 'note yellow' id = 'id1'>
+                    
+                    <div class = 'img-container'><img src = 'http://dogcatfan.com/uploads/posts/2016-12/1481016750_american-pit-bull-terrier-dog.jpg'></div>
+                    <div class = 'delete'>
+                        <div class = 'line1'></div>
+                        <div class = 'line2'></div>
+                    </div>
+                    <div class = 'note-contents'>
+                        <div class = 'header'>Sample note </div> 
+                        <div class = 'content'>a reminder to do something idk</div>
+                    </div>
+                    <div class = 'edit'>&#x270e;</div>
+                </div>
+                
+                <div class = 'note blue' id = 'id2'>
+                   <div class = 'delete'>
+                       <div class = 'line1'></div>
+                       <div class = 'line2'></div>
+                   </div>
+                    <div class = 'note-contents'>
+                        <div class = 'header'>Sample note </div>
+                        <div class = 'content'> a reminder to do something idk</div> 
+                    </div>
+                    <div class = 'edit'>&#x270e;</div>
+                </div>
+
+            </div>
+        </div>
+        <div class = 'group normal'>
+            <h2>Обычные</h2>
+            <div class = 'notes-container' >
+                <div class = 'note red' id = 'id3'>
+                    <div class = 'delete'>
+                        <div class = 'line1'></div>
+                        <div class = 'line2'></div>
+                    </div>
+                    <div class = 'img-container'><img src = 'https://ucarecdn.com/7a34eba2-4aaf-4f28-a708-9993f3261893~1/nth/0/-/progressive/yes/-/format/jpeg/-/quality/lighter/-/stretch/off/-/resize/2048x/'></div>
+                    <div class = 'note-contents'>
+                        <div class = 'header'>Кот </div> 
+                        <div class = 'content'>просто кот</div>
+                    </div>
+                    <div class = 'edit'>&#x270e;</div>
+                    
+                </div>
+                
+                <div class = 'note orange' id = 'id4'>
+                    <div class = 'delete'>
+                        <div class = 'line1'></div>
+                        <div class = 'line2'></div>    
+                    </div>
+                    <div class = 'note-contents'>
+                        <div class = 'header'>Sample note </div>
+                        <div class = 'content'> a reminder to do something idk</div> 
+                    </div>
+                    <div class = 'edit'>&#x270e;</div>
+                    
+                </div>
+            </div>
+        </div>
+        <script src = 'script.js'></script>
+    </body>
+</html>

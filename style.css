@@ -1,0 +1,296 @@
+html {
+    height: 100%;  
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+    background-color: rgb(232, 232, 232);
+    min-height: 100%;
+    width: 100%;
+    
+}
+
+input {
+    outline: none;
+    font-family: Roboto;
+    font-size: 0.8rem;
+
+}
+
+.new-note, .edit-note {
+    position: relative;
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: white;
+    border-radius:5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .32);
+    margin-bottom: 0;
+    min-width: 640px;
+}
+
+
+.new-header, .edit-header {
+    width : 90%;
+    padding: 15px;
+    border-width: 0;
+    font-size: 2em;
+    background-color: inherit; 
+    outline: none;
+    border-radius:5px;
+    padding-left :1.5rem;
+    font-weight: bold;
+    overflow: hidden;
+    display: none;
+  
+    margin-bottom: 0;
+}
+
+.new-header:empty:before {
+    color: rgb(200, 200, 200);
+    content: 'Заголовок';
+}
+
+.new-content, .edit-content {
+    width : 90%;
+    border-width: 0;
+    background-color: inherit; 
+    padding-left:1.5rem;
+    outline: none;
+    padding: 15px 15px 15px 1.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.new-content:empty:before {
+    color: rgb(200, 200, 200);
+    content: 'Заметка...';
+}
+
+
+.tools, .edit-tools {
+    font-size: 0.9rem;
+    position: relative;
+    width:95%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 17px;
+    padding-bottom: 0.5rem;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.priority-type {
+    padding : 3px 7px 3px 7px;
+    background-color: inherit;
+    cursor: default;
+}
+
+
+.color {
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+    margin: 5px;
+    border-style: solid;
+    border-color: white;
+    display: inline-block;
+    
+}
+
+.add, .done {
+    padding : 3px 7px 3px 7px;
+    background-color: inherit;
+    cursor: default;
+   
+}
+
+.add:hover, .done:hover {
+    background-color: rgb(200, 200, 200);  
+}
+
+.add:active, .done:active {
+    background-color:rgb(150, 150, 150);
+}
+
+
+/*.color:hover {
+    border-color:  rgb(201, 201, 201);
+}*/
+
+.group {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.notes-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
+
+.note {
+    position: relative;
+    width: 16rem;
+    min-height: 16rem;
+    border-radius: 1px;
+    margin-right: 1rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .32);
+    margin-bottom: 1rem;
+}
+
+.delete {
+    width:20px;
+    height: 20px;
+    background-color:  rgb(200, 200, 200);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.note:hover .delete {
+    display: flex;
+}
+
+.line1, .line2 {
+    position: absolute;
+    height: 13px;
+    width: 2px;
+    background-color: rgb(150, 150, 150);
+    display: inline-block;
+}
+
+.line1 {
+    transform: rotate(45deg);
+}
+
+.line2 {
+    transform: rotate(-45deg)
+}
+
+.editing-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    max-height: 9rem;
+}
+
+.img-container > img {
+    width: 100%;
+}
+
+.note-contents {
+    padding:1.5rem;
+
+}
+
+.header {
+    font-size: 2em;
+    font-weight: bold;
+    word-wrap: break-word;
+    outline: none;
+}
+
+
+.content {
+    margin-top: .4rem;
+    width: 100%;
+    word-wrap: break-word;
+    outline: none;
+}
+
+
+
+
+
+h2 {
+    font-weight: bold;
+    font-size: 2.3rem;
+    display: inline-block;
+}
+
+
+.edit {
+    position: absolute;
+    display: none;
+    bottom: 2px;
+    right: 5px;
+    font-size: 25px;
+    z-index: 1;
+    color: rgb(100, 100, 100);
+    background-color: inherit;
+}
+
+.edit:hover {
+    color: black;
+    cursor: default;
+}
+
+.note:hover .edit {
+    display: block;
+}
+
+
+
+.yellow {
+    background-color: rgb(253, 255, 141);
+}
+
+.orange {
+    background-color: rgb(251, 208, 125);
+}
+
+.red {
+    background-color: rgb(253, 137, 128);
+   
+}
+
+.blue {
+    background-color: rgb(128, 216, 255);
+}
+
+
+@media (max-width: 768px) {
+    
+    .main {
+        padding: 1.3rem;
+    }
+
+    .notes {
+        padding: 1.3rem;
+        width: 100%;
+    }
+
+}
