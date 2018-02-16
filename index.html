@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href = 'style.css' rel = 'stylesheet'>
         <meta charset="utf-8">
-        
+    
     </head>
     <body>
         <div class  = 'editing-area'>
@@ -26,13 +26,13 @@
                         <div class = 'color red'></div>
                         <div class = 'color blue'></div>
                     </div>
-                    <div class = 'done' from = ''>Готово</div>
+                    <div class = 'done' >Готово</div>
                 </div>  
                 </div>
         </div>
         <div class = 'new-note'> 
-            <div  class = 'new-header' contenteditable="true" aria-multiline="true"></div>
-            <div class = 'new-content' contenteditable="true" aria-multiline="true"></div>
+            <div  class = 'new-header' contenteditable="true" aria-multiline="true" role = 'textbox' aria-label="Заголвок"></div>
+            <div class = 'new-content' contenteditable="true" aria-multiline="true" role = 'textbox'></div>
             <div class = 'tools'>
                 <div class = 'container'>
                     <div class = 'priority-type' style = 'background-color: rgb(200, 200, 200)'> Приоритетная </div>
@@ -52,68 +52,20 @@
         </div>
         <div class = 'group priority'>
             <h2>Приоритетные</h2>
-            
             <div class  = 'notes-container'>
 
-                <div class = 'note yellow' id = 'id1'>
-                    
-                    <div class = 'img-container'><img src = 'http://dogcatfan.com/uploads/posts/2016-12/1481016750_american-pit-bull-terrier-dog.jpg'></div>
-                    <div class = 'delete'>
-                        <div class = 'line1'></div>
-                        <div class = 'line2'></div>
-                    </div>
-                    <div class = 'note-contents'>
-                        <div class = 'header'>Sample note </div> 
-                        <div class = 'content'>a reminder to do something idk</div>
-                    </div>
-                    <div class = 'edit'>&#x270e;</div>
-                </div>
-                
-                <div class = 'note blue' id = 'id2'>
-                   <div class = 'delete'>
-                       <div class = 'line1'></div>
-                       <div class = 'line2'></div>
-                   </div>
-                    <div class = 'note-contents'>
-                        <div class = 'header'>Sample note </div>
-                        <div class = 'content'> a reminder to do something idk</div> 
-                    </div>
-                    <div class = 'edit'>&#x270e;</div>
-                </div>
 
             </div>
         </div>
         <div class = 'group normal'>
             <h2>Обычные</h2>
             <div class = 'notes-container' >
-                <div class = 'note red' id = 'id3'>
-                    <div class = 'delete'>
-                        <div class = 'line1'></div>
-                        <div class = 'line2'></div>
-                    </div>
-                    <div class = 'img-container'><img src = 'https://ucarecdn.com/7a34eba2-4aaf-4f28-a708-9993f3261893~1/nth/0/-/progressive/yes/-/format/jpeg/-/quality/lighter/-/stretch/off/-/resize/2048x/'></div>
-                    <div class = 'note-contents'>
-                        <div class = 'header'>Кот </div> 
-                        <div class = 'content'>просто кот</div>
-                    </div>
-                    <div class = 'edit'>&#x270e;</div>
-                    
-                </div>
                 
-                <div class = 'note orange' id = 'id4'>
-                    <div class = 'delete'>
-                        <div class = 'line1'></div>
-                        <div class = 'line2'></div>    
-                    </div>
-                    <div class = 'note-contents'>
-                        <div class = 'header'>Sample note </div>
-                        <div class = 'content'> a reminder to do something idk</div> 
-                    </div>
-                    <div class = 'edit'>&#x270e;</div>
-                    
                 </div>
             </div>
         </div>
+        <script src = 'data.js'></script>
         <script src = 'script.js'></script>
+        <script src = 'getNoteFromData.js'></script>
     </body>
 </html>
